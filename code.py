@@ -6,8 +6,11 @@ data = {
     'Age': [25, 30, 35],
     'City': ['New York', 'Los Angeles', 'Chicago']
 }
+new_row = {'Name': 'David', 'Age': 40, 'City': 'Houston'}
+ 
 
 df = pd.DataFrame(data)
+df.loc[len(df.index)] = new_row
 
 data_dir = 'data'
 os.makedirs(data_dir,exist_ok = True)
